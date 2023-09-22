@@ -1,0 +1,14 @@
+# version: 2
+
+# models:
+
+## staging tables all coming raw from the source ##
+
+  # - name: staging_orders
+  #   description: Placed orders by consumers
+  #   columns:
+  #     - name: order_id
+  #       description: UUID for each unique order on platform
+  #       test: 
+  #         - unique
+  #         - not_null

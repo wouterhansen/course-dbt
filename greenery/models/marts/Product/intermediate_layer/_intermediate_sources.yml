@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: intermediate
+    database: raw
+    schema: public
+    tables:
+## similar to source /staging ##
+      - name: il_addresses
+      - name: il_events
+      - name: il_promos
+      - name: il_products
+      - name: il_orders
+      - name: il_order_items
+      - name: il_users
+## new logic added ##
+      - name: il_fact_page_views
+    ##  - name: il_fact_ordes --> to be created
+
