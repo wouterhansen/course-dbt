@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: business_layer
+    database: raw
+    schema: public
+    tables:
+## similar to source /staging ##
+      - name: dim_addresses
+      - name: dim_events
+      - name: dim_promos
+      - name: dim_products
+      - name: dim_orders ## normally fact, but just available to be able to add the raw source in if needed --> potentially just replace with new fact orders
+      - name: dim_order_items
+      - name: dim_users
+## new logic added ##
+      - name: fact_orders ## to create order model in Looker
+        description: This fact table contains the orders and additional fields for the operation department as well as marketing related order details like the Repeat Rate
+      - name: fact_page_views ## to create page view model in Looker
+        description: This fact table contains page view events for marketing purposes
+
